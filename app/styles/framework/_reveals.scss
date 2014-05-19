@@ -5,6 +5,12 @@
 .reveal .reveal-content {
   height: 0;
   overflow: hidden;
+
+  transition: height 300ms;
+}
+
+.reveal .reveal-content-wrap {
+  @include clearfix;
 }
 
 .reveal.open .reveal-content {
