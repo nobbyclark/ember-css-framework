@@ -45,3 +45,14 @@ h6, .h6 { font-size: $font-size-h6; }
 p {
   margin: 0 0 ($line-height-computed / 2);
 }
+
+.page-header {
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: ($line-height-computed * 2) 0 $line-height-computed;
+  border-bottom: 1px solid $page-header-border-color;
+}
+
+.subtext {
+  font-style: italic;
+  font-weight: 300;
+}
