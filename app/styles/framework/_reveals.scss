@@ -1,18 +1,74 @@
+// Reveal
+// --------------------------
 .reveal {
   position: relative;
+
+  .reveal-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms;
+  }
+
+  .reveal-content-wrap {
+    @include clearfix;
+  }
 }
 
-.reveal .reveal-content {
-  height: 0;
-  overflow: hidden;
-
-  transition: height 300ms;
-}
-
-.reveal .reveal-content-wrap {
-  @include clearfix;
-}
-
+// Reveal (open)
+// --------------------------
 .reveal.open .reveal-content {
   height: auto;
+}
+
+// Dropdown
+// --------------------------
+.reveal-dropdown {
+
+  .reveal-content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .reveal-content-wrap {
+    height: 200px; // will get calculated
+    background: blue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+// Dropdown (open)
+// --------------------------
+.reveal-dropdown.open {
+
+}
+
+// Popup
+// --------------------------
+.reveal-popup {
+  
+  .reveal-content {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 300ms, z-index 0s 300ms;
+  }
+
+  .reveal-content-wrap {
+    border-radius: 10px;
+  }
+}
+
+// Popup (open)
+// --------------------------
+.reveal-popup.open {
+
+  .reveal-content {
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 300ms;
+  }
 }
