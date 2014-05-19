@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "dependencies": {
+    "ember": "1.5.1",
+    "handlebars": "1.1.2",
+    "ember-data": "1.0.0-beta.7",
+    "jquery": "1.10.2"
+  },
+  "devDependencies": {
+    "ember-mocha-adapter": "0.1.2"
+  }
+}
