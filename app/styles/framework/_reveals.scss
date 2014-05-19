@@ -1,0 +1,12 @@
+.reveal {
+  position: relative;
+}
+
+.reveal .reveal-content {
+  height: 0;
+  overflow: hidden;
+}
+
+.reveal.open .reveal-content {
+  height: auto;
+}
