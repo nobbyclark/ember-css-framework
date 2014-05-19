@@ -1,0 +1,123 @@
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 32px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+
+.btn-default {
+  @extend .btn;
+  border-color: $gray5;
+  color: $gray7;
+  text-shadow: none;
+
+  &:hover {
+    background: $gray1;
+  }
+  &:active {
+    background: $gray3;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  background: linear-gradient(#20c4fa, $blue);
+  border-color: $blue;
+
+  &:hover {
+    background: linear-gradient(lighten(#20c4fa, 8%), $blue);
+  }
+  &:active {
+    background: linear-gradient($blue, #20c4fa);
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background: linear-gradient(#abb5be, $gray6);
+  border-color: $gray6;
+
+  &:hover {
+    background: linear-gradient(lighten(#abb5be, 4%), $gray6);
+  }
+  &:active {
+    background: linear-gradient($gray6, #abb5be);
+  }
+}
+
+.btn-tertiary {
+  @extend .btn;
+  background: linear-gradient(#5d6c78, #505d68);
+  border-color: #505d68;
+  &:hover {
+    background: linear-gradient(lighten(#5d6c78, 6%), #505d68);
+  }
+  &:active {
+    background: linear-gradient(#505d68, #5d6c78);
+  }
+}
+
+.btn-destruct {
+  @extend .btn;
+  color: #fff;
+  background: linear-gradient(#fc5080, $red);
+  border-color: $red;
+
+  &:hover {
+    background: linear-gradient(#fc648f, $red);
+  }
+  &:active {
+    background: linear-gradient($red, #fc5080);
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-lrg {
+  padding: 12px 16px;
+}
+
+.btn-sml {
+  padding: 4px 8px;
+}
+
+.btn-icon {
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  .subtext {
+    margin-left: 48px;
+  }
+
+  .icon {
+    float: right;
+    margin-left: 12px;
+  }
+}
