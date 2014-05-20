@@ -23,9 +23,32 @@
 
 <h3 class="page-header">Popup Reveals</h3>
 
-{{#view App.PopupView position="bottom-center"}}
-  <button class="reveal-toggle btn btn-default" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle</button>
+<h4>Top</h4>
+
+{{#view App.PopupView position="top-right"}}
+  <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>T</button>
   <div class="reveal-content">
+    <div class="arrow"></div>
+    <div class="reveal-content-wrap">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+    </div>
+  </div>
+{{/view}}
+
+{{#view App.PopupView position="top-left"}}
+  <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle fnianf ianf ianfi anfi naif na</button>
+  <div class="reveal-content">
+    <div class="arrow"></div>
+    <div class="reveal-content-wrap">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+    </div>
+  </div>
+{{/view}}
+
+{{#view App.PopupView position="top-right"}}
+  <button class="reveal-toggle btn-default" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle</button>
+  <div class="reveal-content">
+    <div class="arrow"></div>
     <div class="reveal-content-wrap">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
     </div>
