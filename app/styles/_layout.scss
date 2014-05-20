@@ -1,9 +1,73 @@
-.app {
+// Core Layout
+// --------------------------
+$app-sidebar-width: 200px;
+$app-topbar-height: 60px;
+
+.app,
+.app-sidebar,
+.app-main,
+.app-main-wrap,
+.app-content {
   height: 100%;
 }
 
-.app-wrap {
+.app {
+  position: relative;
+  overflow: hidden;
+}
+
+.app-sidebar {
+  position: absolute;
+  width: $app-sidebar-width;
+  border-right: 1px solid $gray4;
+}
+
+.app-main {
+  margin-left: $app-sidebar-width;
+}
+
+.app-main-wrap {
+  position: relative;
+  overflow: auto;
+}
+
+.app-topbar {
+  position: absolute;
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  height: $app-topbar-height;
+  border-bottom: 1px solid $gray4;
+}
+
+.app-content {
+  //padding-top: $app-topbar-height;
+}
+
+.app-content-wrap {
+  position: relative;
+  min-height: 100%;
+  padding: 10px 30px 60px;
+  @include clearfix;
+}
+
+
+// Examples
+// --------------------------
+.example {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 45px 15px 15px;
+  border: 1px solid $gray4;
+  border-radius: 5px;
+
+  &:after {
+    content: "Example";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $gray6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
