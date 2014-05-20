@@ -1,5 +1,8 @@
 // Reveal
 // --------------------------
+
+// default state
+// ----------------
 .reveal {
   position: relative;
 
@@ -14,15 +17,24 @@
   }
 }
 
-// Reveal (open)
-// --------------------------
+// open state
+// ----------------
 .reveal.open .reveal-content {
   height: auto;
 }
 
-// Dropdown
+
+// Dropdown (inherits from "Reveal")
 // --------------------------
+$dropdown-border-radius: 4px;
+
+// default state
+// ----------------
 .reveal-dropdown {
+
+  .reveal-toggle.btn {
+    transition: 300ms border-radius;
+  }
 
   .reveal-content {
     position: absolute;
@@ -34,21 +46,27 @@
   .reveal-content-wrap {
     height: 200px; // will get calculated
     background: $gray9;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: $dropdown-border-radius;
+    border-bottom-right-radius: $dropdown-border-radius;
   }
 }
 
-// Dropdown (open)
-// --------------------------
+// open state
+// ----------------
 .reveal-dropdown.open {
 
+  .reveal-toggle.btn {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
-// Popup
+
+// Popup (inherits from "Dropdown")
 // --------------------------
 $popup-arrow-size: 12px;
 $popup-arrow-offset: 12px;
+$popup-border-radius: 6px;
 
 .reveal-popup {
   
@@ -58,82 +76,81 @@ $popup-arrow-offset: 12px;
     opacity: 0;
     z-index: -1;
     transition: opacity 300ms, z-index 0s 300ms;
+
+    & > .arrow {
+      position: absolute;
+    }
+
+    &.arrow-bottom { 
+      padding-top: 12px; 
+      & > .arrow {
+        top: 0;
+        @include arrow(up, $popup-arrow-size, $gray9);
+      }
+    }
+    &.arrow-top { 
+      padding-bottom: $popup-arrow-size; 
+      & > .arrow {
+        bottom: 0;
+        @include arrow(down, $popup-arrow-size, $gray9);
+      }
+    }
+    &.arrow-left { 
+      padding-right: $popup-arrow-size; 
+      & > .arrow {
+        right: 0;
+        @include arrow(right, $popup-arrow-size, $gray9);
+      }
+    }
+    &.arrow-right { 
+      padding-left: $popup-arrow-size; 
+      & > .arrow {
+        left: 0;
+        @include arrow(left, $popup-arrow-size, $gray9);
+      }
+    }
+
+    &.arrow-bottom,
+    &.arrow-top {
+      &.center {
+        & > .arrow {
+          @include abs-center-horizontal;
+        }
+      }
+      &.left {
+        & > .arrow {
+          left: $popup-arrow-offset;
+        }
+      }
+      &.right {
+        & > .arrow {
+          right: $popup-arrow-offset;
+        }
+      }
+    }
+
+    &.arrow-left,
+    &.arrow-right {
+      &.center {
+        & > .arrow {
+          @include abs-center-vertical;
+        }
+      }
+      &.top {
+        & > .arrow {
+          top: $popup-arrow-offset;
+        }
+      }
+      &.bottom {
+        & > .arrow {
+          bottom: $popup-arrow-offset;
+        }
+      }
+    }
   }
 
   .reveal-content-wrap {
-    border-radius: 10px;
-  }
-
-  // Arrow
-  .arrow {
-    position: absolute;
-  }
-
-  .arrow-bottom { 
-    padding-top: 12px; 
-    .arrow  {
-      top: 0;
-      @include arrow(up, $popup-arrow-size, $gray9);
-    }
-  }
-  .arrow-top { 
-    padding-bottom: $popup-arrow-size; 
-    .arrow  {
-      bottom: 0;
-      @include arrow(down, $popup-arrow-size, $gray9);
-    }
-  }
-  .arrow-left { 
-    padding-right: $popup-arrow-size; 
-    .arrow  {
-      right: 0;
-      @include arrow(right, $popup-arrow-size, $gray9);
-    }
-  }
-  .arrow-right { 
-    padding-left: $popup-arrow-size; 
-    .arrow  {
-      left: 0;
-      @include arrow(left, $popup-arrow-size, $gray9);
-    }
-  }
-
-  .arrow-bottom,
-  .arrow-top {
-    &.center {
-      .arrow {
-        @include abs-center-horizontal;
-      }
-    }
-    &.left {
-      .arrow {
-        left: $popup-arrow-offset;
-      }
-    }
-    &.right {
-      .arrow {
-        right: $popup-arrow-offset;
-      }
-    }
-  }
-
-  .arrow-left,
-  .arrow-right {
-    &.center {
-      .arrow {
-        @include abs-center-vertical;
-      }
-    }
-    &.top {
-      .arrow {
-        top: $popup-arrow-offset;
-      }
-    }
-    &.bottom {
-      .arrow {
-        bottom: $popup-arrow-offset;
-      }
-    }
+    border-radius: $popup-border-radius;
   }
 }
 
