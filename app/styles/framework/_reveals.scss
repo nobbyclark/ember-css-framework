@@ -6,6 +6,17 @@
 .reveal {
   position: relative;
 
+  .reveal-toggle {
+    &.btn {
+      transition: 300ms border-radius;
+    }
+    &.btn-icon {
+      .icon {
+        transition: -webkit-transform 300ms;
+      }
+    }
+  }
+
   .reveal-content {
     height: 0;
     overflow: hidden;
@@ -19,8 +30,43 @@
 
 // open state
 // ----------------
-.reveal.open .reveal-content {
-  height: auto;
+.reveal.open {
+
+  .reveal-toggle {
+    &.btn-icon {
+      .icon {
+        -webkit-transform: rotate(180deg);
+      }
+    }
+  }
+
+  .reveal-content {
+    height: auto;
+  }
+}
+
+
+// Panel
+// --------------------------
+
+// default state
+// ----------------
+.reveal-panel {
+  border-bottom: 2px solid $gray4;
+
+  .reveal-toggle {
+    &.btn {
+      padding-left: 0;
+      padding-right: 0;
+      color: $gray6;
+      border: none;
+
+      &:hover,
+      &:active {
+        background: none;
+      }
+    }
+  }
 }
 
 
@@ -31,10 +77,6 @@ $dropdown-border-radius: 4px;
 // default state
 // ----------------
 .reveal-dropdown {
-
-  .reveal-toggle.btn {
-    transition: 300ms border-radius;
-  }
 
   .reveal-content {
     position: absolute;
@@ -55,9 +97,11 @@ $dropdown-border-radius: 4px;
 // ----------------
 .reveal-dropdown.open {
 
-  .reveal-toggle.btn {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .reveal-toggle {
+    &.btn {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }
 
