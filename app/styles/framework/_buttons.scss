@@ -109,18 +109,15 @@
   font-size: 12px;
 }
 
-.btn {
-
-  .subtext {
-    margin-left: 48px;
-  }
-}
-
 .btn-icon {
   position: relative;
   text-align: left;
   padding-left: 12px;
   padding-right: 12px;
+
+  .subtext {
+    margin-left: 48px;
+  }
 
   .icon {
     float: right;

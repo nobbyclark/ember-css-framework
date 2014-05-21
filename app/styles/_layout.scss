@@ -85,8 +85,49 @@ $app-topbar-height: 60px;
 
 // Examples
 // --------------------------
+$code-column-width: 50%;
+$code-column-padding-top: 45px;
+$code-column-padding-horizontal: 30px;
+
 .example {
   position: relative;
   padding-bottom: 48px;
   border-bottom: 1px dashed $gray4;
+}
+
+#methods {
+  background: $gray10;
+  margin-left: $code-column-width;
+}
+
+.method {
+  position: relative;
+  padding-top: $code-column-padding-top;
+
+  &:last-child {
+    .method-example {
+      padding-bottom: 45px;
+    }
+  }
+}
+
+.method-section {
+  position: relative;
+  clear: left;
+  margin-left: -100%;
+  padding-top: $code-column-padding-top;
+}
+
+.method-description {
+  position: relative;
+  float: left;
+  width: $code-column-width;
+  padding: 0 $code-column-padding-horizontal;
+}
+
+.method-example {
+  position: relative;
+  width: $code-column-width;
+  margin-left: $code-column-width;
+  padding: 0 $code-column-padding-horizontal 0;
 }
