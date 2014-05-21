@@ -1,128 +1,109 @@
-<h2 class="page-header">Reveals</h2>
+<div class="examples">
 
-<h3>Basic Reveals</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco.</p>
-
-<div class="example">
-
-  {{#view App.RevealView}}
-    <button class="reveal-toggle btn btn-default" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle</button>
-    <div class="reveal-content">
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+  <div class="example">
+    <div class="example-section">
+      <div class="example-description">
+        <h2 class="section-heading">Reveals</h2>
+        <p>Welcome to the <strong>buttons</strong> section.</p>
+      </div>
+      <div class="example-code">
+        <pre class="codehilite"><span class="c">&lt;!-- Reveals --&gt;</span></pre>
       </div>
     </div>
-  {{/view}}
+  </div><!-- /.example -->
 
-</div>
-
-<h3>Panel Reveals</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco.</p>
-
-<div class="example">
-
-  {{#view App.PanelView}}
-    <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
-    <div class="reveal-content">
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+  <div class="example">
+    <div class="example-section">
+      <div class="example-description">
+        <h3 class="h4">Reveals</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+        {{#view App.RevealView}}
+          <button class="reveal-toggle btn btn-default" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle</button>
+          <div class="reveal-content">
+            <div class="reveal-content-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+            </div>
+          </div>
+        {{/view}}
+      </div>
+      <div class="example-code">
+        
       </div>
     </div>
-  {{/view}}
+  </div><!-- /.example -->
 
-  {{#view App.PanelView}}
-    <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
-    <div class="reveal-content">
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+  <div class="example">
+    <div class="example-section">
+      <div class="example-description">
+        <h3 class="h4">Panels</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+        {{#view App.PanelView}}
+          <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
+          <div class="reveal-content">
+            <div class="reveal-content-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+            </div>
+          </div>
+        {{/view}}
+
+        {{#view App.PanelView}}
+          <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
+          <div class="reveal-content">
+            <div class="reveal-content-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+            </div>
+          </div>
+        {{/view}}
+      </div>
+      <div class="example-code">
+        
       </div>
     </div>
-  {{/view}}
+  </div><!-- /.example -->
 
-</div>
-
-<h3>Dropdown Reveals</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris.</p>
-
-<div class="example">
-
-  {{#view App.DropdownView}}
-    <button class="reveal-toggle btn btn-primary btn-icon" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
-    <div class="reveal-content">
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+  <div class="example">
+    <div class="example-section">
+      <div class="example-description">
+        <h3 class="h4">Dropdown Reveals</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+        {{#view App.DropdownView}}
+          <button class="reveal-toggle btn btn-primary btn-icon" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
+          <div class="reveal-content">
+            <div class="reveal-content-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+            </div>
+          </div>
+        {{/view}}
+      </div>
+      <div class="example-code">
+        
       </div>
     </div>
-  {{/view}}
+  </div><!-- /.example -->
 
-</div>
-
-<div class="example">
-
-  {{#view App.DropdownView}}
-    <button class="reveal-toggle btn btn-secondary btn-icon btn-block" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle<span class="icon">&blacktriangledown;</span></button>
-    <div class="reveal-content">
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+  <div class="example">
+    <div class="example-section">
+      <div class="example-description">
+        <h3 class="h4">Popup Reveals</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+        {{#view App.PopupView position="top-right"}}
+          <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>T</button>
+          <div class="reveal-content">
+            <div class="arrow"></div>
+            <div class="reveal-content-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
+            </div>
+          </div>
+        {{/view}}
+      </div>
+      <div class="example-code">
+        
       </div>
     </div>
-  {{/view}}
-
-</div>
-
-<h3>Popup Reveals</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco.</p>
-
-<div class="example">
-
-  {{#view App.PopupView position="top-right"}}
-    <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>T</button>
-    <div class="reveal-content">
-      <div class="arrow"></div>
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-      </div>
-    </div>
-  {{/view}}
-
-</div>
-
-<div class="example">
-
-  {{#view App.PopupView position="top-left"}}
-    <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle fnianf ianf ianfi anfi naif na</button>
-    <div class="reveal-content">
-      <div class="arrow"></div>
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-      </div>
-    </div>
-  {{/view}}
-
-</div>
-
-<div class="example">
-
-  {{#view App.PopupView position="top-right"}}
-    <button class="reveal-toggle btn-default" {{action "toggleReveal" target=view bubbles=false}}>Reveal Toggle</button>
-    <div class="reveal-content">
-      <div class="arrow"></div>
-      <div class="reveal-content-wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-      </div>
-    </div>
-  {{/view}}
+  </div><!-- /.example -->
 
 </div>

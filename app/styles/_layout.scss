@@ -1,6 +1,6 @@
 // Core Layout
 // --------------------------
-$app-sidebar-width: 200px;
+$app-sidebar-width: 130px;
 $app-topbar-height: 60px;
 
 .app,
@@ -74,7 +74,6 @@ $app-topbar-height: 60px;
       font-weight: 600;
       padding-top: 2px;
       padding-bottom: 2px;
-      transition: color 500ms;
 
       &.active {
         color: $blue;
@@ -83,49 +82,54 @@ $app-topbar-height: 60px;
   }
 }
 
+// Headings
+// --------------------------
+.section-heading {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
 // Examples
 // --------------------------
 $code-column-width: 50%;
 $code-column-padding-top: 45px;
 $code-column-padding-horizontal: 30px;
 
-.example {
-  position: relative;
-  padding-bottom: 48px;
-  border-bottom: 1px dashed $gray4;
-}
-
-#methods {
+.examples {
   background: $gray10;
   margin-left: $code-column-width;
 }
 
-.method {
+.example {
   position: relative;
   padding-top: $code-column-padding-top;
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   &:last-child {
-    .method-example {
+    .example-code {
       padding-bottom: 45px;
     }
   }
 }
 
-.method-section {
+.example-section {
   position: relative;
   clear: left;
   margin-left: -100%;
   padding-top: $code-column-padding-top;
 }
 
-.method-description {
+.example-description {
   position: relative;
   float: left;
   width: $code-column-width;
   padding: 0 $code-column-padding-horizontal;
 }
 
-.method-example {
+.example-code {
   position: relative;
   width: $code-column-width;
   margin-left: $code-column-width;
