@@ -1,0 +1,88 @@
+//
+// Arrows
+// --------------------------------------------------
+
+
+// Variables
+// --------------------------------------------------
+
+// dimensions
+$arrow-border-width:         1px            !default;
+$default-arrow-width:        10px;
+
+// colors
+$default-arrow-bg-color:             #ffffff        !default;
+$default-arrow-border-color:         #b8b8b8        !default;
+
+
+// SASS
+// --------------------------------------------------
+
+%arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+
+  &:before {
+    content: "";
+    display: block;
+  }
+}
+
+@mixin arrow-up($arrow-width, $arrow-bg-color, $arrow-border-color) {
+  @extend %arrow;
+  border-width: 0 $arrow-width $arrow-width $arrow-width;
+  border-bottom-color: $arrow-border-color;
+
+  &:before {
+    @extend %arrow;
+    border-width: 0 $arrow-width $arrow-width $arrow-width;
+    border-bottom-color: $arrow-bg-color;
+    top: $arrow-border-width;
+    left: -$arrow-width;
+  }
+}
+
+@mixin arrow-right($arrow-width, $arrow-bg-color, $arrow-border-color) {
+  @extend %arrow;
+  border-width: $arrow-width 0 $arrow-width $arrow-width;
+  border-left-color: $arrow-border-color;
+
+  &:before {
+    @extend %arrow;
+    border-width: $arrow-width 0 $arrow-width $arrow-width;
+    border-left-color: $arrow-bg-color;
+    top: -$arrow-width;
+    right: $arrow-border-width;
+  }
+}
+
+@mixin arrow-down($arrow-width, $arrow-bg-color, $arrow-border-color) {
+  @extend %arrow;
+  border-width: $arrow-width $arrow-width 0 $arrow-width;
+  border-top-color: $arrow-border-color;
+
+  &:before {
+    @extend %arrow;
+    border-width: $arrow-width $arrow-width 0 $arrow-width;
+    border-top-color: $arrow-bg-color;
+    bottom: $arrow-border-width;
+    left: -$arrow-width;
+  }
+}
+
+@mixin arrow-left($arrow-width, $arrow-bg-color, $arrow-border-color) {
+  @extend %arrow;
+  border-width: $arrow-width $arrow-width $arrow-width 0;
+  border-right-color: $arrow-border-color;
+
+  &:before {
+    @extend %arrow;
+    border-width: $arrow-width $arrow-width $arrow-width 0;
+    border-right-color: $arrow-bg-color;
+    top: -$arrow-width;
+    left: $arrow-border-width;
+  }
+}

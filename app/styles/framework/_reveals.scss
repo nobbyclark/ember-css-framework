@@ -129,28 +129,28 @@ $popup-border-radius: 6px;
       padding-top: 12px; 
       & > .arrow {
         top: 0;
-        @include arrow(up, $popup-arrow-size, $gray9);
+        @include arrow-up($popup-arrow-size, $gray9, $gray9);
       }
     }
     &.arrow-top { 
       padding-bottom: $popup-arrow-size; 
       & > .arrow {
         bottom: 0;
-        @include arrow(down, $popup-arrow-size, $gray9);
+        @include arrow-down($popup-arrow-size, $gray9, $gray9);
       }
     }
     &.arrow-left { 
       padding-right: $popup-arrow-size; 
       & > .arrow {
         right: 0;
-        @include arrow(right, $popup-arrow-size, $gray9);
+        @include arrow-right($popup-arrow-size, $gray9, $gray9);
       }
     }
     &.arrow-right { 
       padding-left: $popup-arrow-size; 
       & > .arrow {
         left: 0;
-        @include arrow(left, $popup-arrow-size, $gray9);
+        @include arrow-left($popup-arrow-size, $gray9, $gray9);
       }
     }
 
