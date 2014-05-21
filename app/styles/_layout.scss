@@ -7,7 +7,8 @@ $app-topbar-height: 60px;
 .app-sidebar,
 .app-main,
 .app-main-wrap,
-.app-content {
+.app-content,
+.app-content-sidebar {
   height: 100%;
 }
 
@@ -23,12 +24,11 @@ $app-topbar-height: 60px;
 }
 
 .app-main {
-  margin-left: $app-sidebar-width;
+  padding-top: $app-topbar-height;
 }
 
 .app-main-wrap {
   position: relative;
-  overflow: auto;
 }
 
 .app-topbar {
@@ -39,35 +39,54 @@ $app-topbar-height: 60px;
 }
 
 .app-content {
-  //padding-top: $app-topbar-height;
+  margin-left: $app-sidebar-width;
+  overflow: auto;
 }
 
 .app-content-wrap {
   position: relative;
-  min-height: 100%;
-  padding: 10px 30px 60px;
-  @include clearfix;
+  height: 100%;
 }
 
+.app-content-sidebar {
+  height: 1800px;
+  background: $gray10;
+  border-left: 1px solid $gray13;
+}
+
+.logo-link {
+  display: block;
+  img {
+    display: inherit;
+    padding: 14px 15px;
+  }
+}
+
+
+// App Menu
+// --------------------------
+.app-menu {
+  padding-top: 24px;
+
+  .nav-list {
+    a {
+      color: $gray6;
+      font-weight: 600;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      transition: color 500ms;
+
+      &.active {
+        color: $blue;
+      }
+    }
+  }
+}
 
 // Examples
 // --------------------------
 .example {
   position: relative;
-  margin-bottom: 16px;
-  padding: 45px 15px 15px;
-  border: 1px solid $gray4;
-  border-radius: 5px;
-
-  &:after {
-    content: "Example";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 12px;
-    font-weight: 600;
-    color: $gray6;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+  padding-bottom: 48px;
+  border-bottom: 1px dashed $gray4;
 }

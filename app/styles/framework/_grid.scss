@@ -1,0 +1,22 @@
+// Grid
+// --------------------------
+$columns: 12;
+$gutter: 30px;
+
+.row {
+  @include clearfix;
+}
+
+.col {
+  float: left;
+  position: relative;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    @extend .col;
+    width: ((100 / $columns) * $i) * 1%;
+  }
+}
