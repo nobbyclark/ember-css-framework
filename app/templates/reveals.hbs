@@ -93,12 +93,42 @@
 
         <div class="popupview-example">
 
-          {{#view App.PopupView position="right-center"}}
+          {{#view App.PopupView position="top-center" id="popup-example-1"}}
             <button class="reveal-toggle btn-primary" {{action "toggleReveal" target=view bubbles=false}}>lorem</button>
             <div class="reveal-content popup popup-menu">
               <div class="arrow"></div>
               <div class="wrap">
-                <p>{{view.text}}</p>
+                <p>Top - Center</p>
+              </div>
+            </div>
+          {{/view}}
+
+          {{#view App.PopupView position="bottom-center" id="popup-example-2"}}
+            <button class="reveal-toggle btn-primary" {{action "toggleReveal" target=view bubbles=false}}>lorem</button>
+            <div class="reveal-content popup popup-menu">
+              <div class="arrow"></div>
+              <div class="wrap">
+                <p>Bottom - Center</p>
+              </div>
+            </div>
+          {{/view}}
+
+          {{#view App.PopupView position="left-center" id="popup-example-3"}}
+            <button class="reveal-toggle btn-primary" {{action "toggleReveal" target=view bubbles=false}}>lorem</button>
+            <div class="reveal-content popup popup-menu">
+              <div class="arrow"></div>
+              <div class="wrap">
+                <p>Left - Center</p>
+              </div>
+            </div>
+          {{/view}}
+
+          {{#view App.PopupView position="right-center" id="popup-example-4"}}
+            <button class="reveal-toggle btn-primary" {{action "toggleReveal" target=view bubbles=false}}>lorem</button>
+            <div class="reveal-content popup popup-menu">
+              <div class="arrow"></div>
+              <div class="wrap">
+                <p>Right - Center</p>
               </div>
             </div>
           {{/view}}
