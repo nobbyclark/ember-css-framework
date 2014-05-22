@@ -23,7 +23,7 @@
     transition: height 300ms;
   }
 
-  .reveal-content-wrap {
+  .wrap {
     @include clearfix;
   }
 }
@@ -38,10 +38,6 @@
         -webkit-transform: rotate(180deg);
       }
     }
-  }
-
-  .reveal-content {
-    
   }
 }
 
@@ -70,7 +66,7 @@
 }
 
 
-// Dropdown (inherits from "Reveal")
+// Dropdown
 // --------------------------
 $dropdown-border-radius: 4px;
 
@@ -85,7 +81,7 @@ $dropdown-border-radius: 4px;
     z-index: 999;
   }
 
-  .reveal-content-wrap {
+  .wrap {
     background: $gray9;
     border-bottom-left-radius: $dropdown-border-radius;
     border-bottom-right-radius: $dropdown-border-radius;
@@ -105,15 +101,8 @@ $dropdown-border-radius: 4px;
 }
 
 
-// Popup (inherits from "Dropdown")
+// Popup
 // --------------------------
-$callout-arrow-size: 12px;
-$callout-arrow-offset: 12px;
-$callout-border-radius: 6px;
-$callout-border-width: 1px;
-$callout-bg-color: white;
-$callout-border-color: $gray6;
-
 .reveal-popup {
   position: absolute;
   
@@ -125,7 +114,7 @@ $callout-border-color: $gray6;
     transition: opacity 300ms, z-index 0s 300ms;
   }
 
-  .reveal-content-wrap {
+  .wrap {
     padding: 10px;
     background: $gray9;;
     border: 1px solid $gray9;

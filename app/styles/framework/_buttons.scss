@@ -37,7 +37,8 @@
   &:hover {
     background: $gray1;
   }
-  &:active {
+  &:active,
+  &.active {
     background: $gray3;
   }
 }
@@ -50,7 +51,8 @@
   &:hover {
     background: linear-gradient(lighten(#20c4fa, 8%), $blue);
   }
-  &:active {
+  &:active,
+  &.active {
     background: linear-gradient($blue, #20c4fa);
   }
 }
@@ -63,7 +65,8 @@
   &:hover {
     background: linear-gradient(lighten(#abb5be, 4%), $gray6);
   }
-  &:active {
+  &:active,
+  &.active {
     background: linear-gradient($gray6, #abb5be);
   }
 }
@@ -75,7 +78,8 @@
   &:hover {
     background: linear-gradient(lighten(#5d6c78, 6%), #505d68);
   }
-  &:active {
+  &:active,
+  &.active {
     background: linear-gradient(#505d68, #5d6c78);
   }
 }
@@ -89,7 +93,8 @@
   &:hover {
     background: linear-gradient(#fc648f, $red);
   }
-  &:active {
+  &:active,
+  &.active {
     background: linear-gradient($red, #fc5080);
   }
 }

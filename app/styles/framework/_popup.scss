@@ -50,7 +50,7 @@ $callout-border-color: $gray6;
     &.bottom > .arrow { bottom: $callout-arrow-offset; }
   }
 
-  & > .reveal-content-wrap {
+  & > .wrap {
     padding: 10px;
     background: $callout-bg-color;
     border: 1px solid $callout-border-color;
@@ -106,7 +106,7 @@ $popup-menu-border-color: $gray9;
     }
   }
 
-  & > .reveal-content-wrap {
+  & > .wrap {
     background: $popup-menu-bg-color;
     border: 1px solid $popup-menu-border-color;
     border-radius: 10px;

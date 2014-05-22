@@ -8,7 +8,7 @@ App.RevealView = Ember.View.extend({
     var el = this.$('.reveal-content');
 
     if (this.get('isOpen')) {
-      el.css('height', this.$('.reveal-content-wrap').outerHeight());
+      el.css('height', this.$('.reveal-content > .wrap').outerHeight());
     } else {
       el.css('height', "");
     }
