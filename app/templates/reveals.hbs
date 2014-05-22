@@ -93,9 +93,9 @@
 
         <div class="popupview-example">
 
-          {{#view App.PopupView position="right-center" id="nick"}}
+          {{#view App.PopupView position="right-center"}}
             <button class="reveal-toggle btn-default btn-sml" {{action "toggleReveal" target=view bubbles=false}}>T</button>
-            <div class="reveal-content">
+            <div class="reveal-content popup popup-menu">
               <div class="arrow"></div>
               <div class="reveal-content-wrap">
                 <p>{{view.text}}</p>

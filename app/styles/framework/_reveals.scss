@@ -123,79 +123,12 @@ $callout-border-color: $gray6;
     opacity: 0;
     z-index: -1;
     transition: opacity 300ms, z-index 0s 300ms;
-
-    &.arrow-bottom { 
-      padding-top: 12px;
-      & > .arrow {
-        top: 0;
-        @include arrow-up($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
-      }
-    }
-    &.arrow-top { 
-      padding-bottom: $callout-arrow-size; 
-      & > .arrow {
-        bottom: 0;
-        @include arrow-down($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
-      }
-    }
-    &.arrow-left { 
-      padding-right: $callout-arrow-size; 
-      & > .arrow {
-        right: 0;
-        @include arrow-right($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
-      }
-    }
-    &.arrow-right { 
-      padding-left: $callout-arrow-size; 
-      & > .arrow {
-        left: 0;
-        @include arrow-left($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
-      }
-    }
-
-    &.arrow-bottom,
-    &.arrow-top {
-      &.center {
-        & > .arrow {
-          @include abs-center-horizontal;
-        }
-      }
-      &.left {
-        & > .arrow {
-          left: $callout-arrow-offset;
-        }
-      }
-      &.right {
-        & > .arrow {
-          right: $callout-arrow-offset;
-        }
-      }
-    }
-
-    &.arrow-left,
-    &.arrow-right {
-      &.center {
-        & > .arrow {
-          @include abs-center-vertical;
-        }
-      }
-      &.top {
-        & > .arrow {
-          top: $callout-arrow-offset;
-        }
-      }
-      &.bottom {
-        & > .arrow {
-          bottom: $callout-arrow-offset;
-        }
-      }
-    }
   }
 
   .reveal-content-wrap {
     padding: 10px;
-    background: $callout-bg-color;
-    border: 1px solid $callout-border-color;
+    background: $gray9;;
+    border: 1px solid $gray9;
     border-radius: 10px;
 
     p {

@@ -1,0 +1,125 @@
+$callout-arrow-size: 12px;
+$callout-arrow-offset: 12px;
+$callout-border-radius: 6px;
+$callout-border-width: 1px;
+$callout-bg-color: white;
+$callout-border-color: $gray6;
+
+.popup {
+
+  &.arrow-bottom { 
+    padding-top: $callout-arrow-size;
+    & > .arrow {
+      top: 0;
+      @include arrow-up($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
+    }
+  }
+  &.arrow-top { 
+    padding-bottom: $callout-arrow-size; 
+    & > .arrow {
+      bottom: 0;
+      @include arrow-down($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
+    }
+  }
+  &.arrow-left { 
+    padding-right: $callout-arrow-size; 
+    & > .arrow {
+      right: 0;
+      @include arrow-right($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
+    }
+  }
+  &.arrow-right { 
+    padding-left: $callout-arrow-size; 
+    & > .arrow {
+      left: 0;
+      @include arrow-left($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
+    }
+  }
+
+  &.arrow-bottom,
+  &.arrow-top {
+    &.center > .arrow { @include abs-center-horizontal; }
+    &.left > .arrow { left: $callout-arrow-offset; }
+    &.right > .arrow { right: $callout-arrow-offset; }
+  }
+
+  &.arrow-left,
+  &.arrow-right {
+    &.center > .arrow { @include abs-center-vertical; }
+    &.top > .arrow { top: $callout-arrow-offset; }
+    &.bottom > .arrow { bottom: $callout-arrow-offset; }
+  }
+
+  & > .reveal-content-wrap {
+    padding: 10px;
+    background: $callout-bg-color;
+    border: 1px solid $callout-border-color;
+    border-radius: 10px;
+  }
+}
+
+// Popup menu
+// --------------------------
+$popup-menu-arrow-size: 6px;
+$popup-menu-arrow-offset: 6px;
+$popup-menu-border-radius: 6px;
+$popup-menu-border-width: 2px;
+$popup-menu-bg-color: $gray9;
+$popup-menu-border-color: $gray9;
+
+.popup-menu {
+
+  &.arrow-bottom {
+    padding-top: $popup-menu-arrow-size;
+    & > .arrow { @include arrow-up($popup-menu-arrow-size, $popup-menu-bg-color, $popup-menu-border-width, $popup-menu-border-color); }
+  }
+  &.arrow-top {
+    padding-bottom: $popup-menu-arrow-size;
+    & > .arrow {    @include arrow-down($popup-menu-arrow-size, $popup-menu-bg-color, $popup-menu-border-width, $popup-menu-border-color); }
+  }
+  &.arrow-left {
+    padding-right: $popup-menu-arrow-size;
+    & > .arrow {   @include arrow-right($popup-menu-arrow-size, $popup-menu-bg-color, $popup-menu-border-width, $popup-menu-border-color); }
+  }
+  &.arrow-right {
+    padding-left: $popup-menu-arrow-size;
+    & > .arrow {  @include arrow-left($popup-menu-arrow-size, $popup-menu-bg-color, $popup-menu-border-width, $popup-menu-border-color); }
+  }
+
+  &.arrow-bottom,
+  &.arrow-top {
+    &.left > .arrow {
+      left: $popup-menu-arrow-offset;
+    }
+    &.right > .arrow {
+      right: $popup-menu-arrow-offset;
+    }
+  }
+
+  &.arrow-left,
+  &.arrow-right {
+    &.top > .arrow {
+      top: $popup-menu-arrow-offset;
+    }
+    &.bottom > .arrow {
+      bottom: $popup-menu-arrow-offset;
+    }
+  }
+
+  & > .reveal-content-wrap {
+    background: $popup-menu-bg-color;
+    border: 1px solid $popup-menu-border-color;
+    border-radius: 10px;
+
+    p {
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
