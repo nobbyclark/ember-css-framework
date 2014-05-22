@@ -1,6 +1,5 @@
 App.RevealView = Ember.View.extend({
   isOpen: false,
-  classNames: ['reveal'],
   classNameBindings: ['isOpen:open'],
 
   onToggleReveal: function() {

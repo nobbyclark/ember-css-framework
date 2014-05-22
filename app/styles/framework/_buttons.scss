@@ -29,7 +29,6 @@
 }
 
 .btn-default {
-  @extend .btn;
   border-color: $gray5;
   color: $gray7;
   text-shadow: none;
@@ -44,7 +43,6 @@
 }
 
 .btn-primary {
-  @extend .btn;
   background: linear-gradient(#20c4fa, $blue);
   border-color: $blue;
 
@@ -58,7 +56,6 @@
 }
 
 .btn-secondary {
-  @extend .btn;
   background: linear-gradient(#abb5be, $gray6);
   border-color: $gray6;
 
@@ -72,7 +69,6 @@
 }
 
 .btn-tertiary {
-  @extend .btn;
   background: linear-gradient(#5d6c78, #505d68);
   border-color: #505d68;
   &:hover {
@@ -85,7 +81,6 @@
 }
 
 .btn-destruct {
-  @extend .btn;
   color: #fff;
   background: linear-gradient(#fc5080, $red);
   border-color: $red;

@@ -2,10 +2,9 @@ App.PopupView = App.RevealView.extend({
   classNames: ['reveal-popup'],
   offset: 10,
   position: 'top-center',
-  text: "Zoltan is a cool guy? No Nick is a way cooler dude bro. fnain nfianfa",
 
   onToggleReveal: function() {
-    
+    // override default
   },
 
   didInsertElement: function() {

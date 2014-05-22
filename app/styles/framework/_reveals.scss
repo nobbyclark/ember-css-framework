@@ -1,18 +1,16 @@
-// Reveal
-// --------------------------
-
-// default state
-// ----------------
-.reveal {
+.reveal-panel,
+.reveal-dropdown {
   position: relative;
 
   & > .reveal-toggle {
-    &.btn {
-      transition: 300ms border-radius;
-    }
+    /* fixes flicker in Safari */
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
     &.btn-icon {
       .icon {
-        transition: -webkit-transform 300ms;
+        -webkit-transition: -webkit-transform 300ms;
+        transition: transform 300ms;
       }
     }
   }
@@ -21,21 +19,15 @@
     height: 0;
     overflow: hidden;
     transition: height 300ms;
-
-    & > .wrap {
-      @include clearfix;
-    }
   }
-}
 
-// open state
-// ----------------
-.reveal.open {
-
-  & > .reveal-toggle {
-    &.btn-icon {
-      .icon {
-        -webkit-transform: rotate(180deg);
+  &.open {
+    & > .reveal-toggle {
+      &.btn-icon {
+        .icon {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -45,21 +37,28 @@
 // Panel
 // --------------------------
 
-// default state
-// ----------------
 .reveal-panel {
   border-bottom: 2px solid $gray4;
 
-  .reveal-toggle {
+  & > .reveal-toggle {
     &.btn {
       padding-left: 0;
       padding-right: 0;
       color: $gray6;
       border: none;
+      transition: color 300ms;
 
       &:hover,
       &:active {
         background: none;
+      }
+    }
+  }
+
+  &.open {
+     & > .reveal-toggle {
+      &.btn {
+        color: $gray8;
       }
     }
   }
@@ -68,34 +67,28 @@
 
 // Dropdown
 // --------------------------
-$dropdown-border-radius: 4px;
 
-// default state
-// ----------------
 .reveal-dropdown {
 
-  .reveal-content {
+  & > .reveal-toggle {
+    &.btn {
+      transition: 300ms border-radius;
+    }
+  }
+
+  & > .reveal-content {
     position: absolute;
     top: 100%;
     width: 100%;
     z-index: 999;
   }
 
-  .wrap {
-    background: $gray9;
-    border-bottom-left-radius: $dropdown-border-radius;
-    border-bottom-right-radius: $dropdown-border-radius;
-  }
-}
-
-// open state
-// ----------------
-.reveal-dropdown.open {
-
-  .reveal-toggle {
-    &.btn {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+  &.open {
+    .reveal-toggle {
+      &.btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
   }
 }
@@ -103,6 +96,7 @@ $dropdown-border-radius: 4px;
 
 // Popup
 // --------------------------
+
 .reveal-popup {
   position: absolute;
   
@@ -115,19 +109,11 @@ $dropdown-border-radius: 4px;
     transition: opacity 300ms, z-index 0s 300ms;
   }
 
-  p {
-    margin: 0;
-    font-size: 13px;
-  }
-}
-
-// Popup (open)
-// --------------------------
-.reveal-popup.open {
-
-  & > .reveal-content {
-    z-index: 999;
-    opacity: 1;
-    transition: opacity 300ms;
+  &.open {
+    & > .reveal-content {
+      z-index: 999;
+      opacity: 1;
+      transition: opacity 300ms;
+    }
   }
 }
