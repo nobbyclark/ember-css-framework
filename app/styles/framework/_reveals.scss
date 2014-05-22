@@ -41,7 +41,7 @@
   }
 
   .reveal-content {
-    height: auto;
+    
   }
 }
 
@@ -86,7 +86,6 @@ $dropdown-border-radius: 4px;
   }
 
   .reveal-content-wrap {
-    height: 200px; // will get calculated
     background: $gray9;
     border-bottom-left-radius: $dropdown-border-radius;
     border-bottom-right-radius: $dropdown-border-radius;
@@ -108,11 +107,15 @@ $dropdown-border-radius: 4px;
 
 // Popup (inherits from "Dropdown")
 // --------------------------
-$popup-arrow-size: 12px;
-$popup-arrow-offset: 12px;
-$popup-border-radius: 6px;
+$callout-arrow-size: 12px;
+$callout-arrow-offset: 12px;
+$callout-border-radius: 6px;
+$callout-border-width: 1px;
+$callout-bg-color: white;
+$callout-border-color: $gray6;
 
 .reveal-popup {
+  position: absolute;
   
   .reveal-content {
     width: 200px;
@@ -121,36 +124,32 @@ $popup-border-radius: 6px;
     z-index: -1;
     transition: opacity 300ms, z-index 0s 300ms;
 
-    & > .arrow {
-      position: absolute;
-    }
-
     &.arrow-bottom { 
-      padding-top: 12px; 
+      padding-top: 12px;
       & > .arrow {
         top: 0;
-        @include arrow-up($popup-arrow-size, $gray9, $gray9);
+        @include arrow-up($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
       }
     }
     &.arrow-top { 
-      padding-bottom: $popup-arrow-size; 
+      padding-bottom: $callout-arrow-size; 
       & > .arrow {
         bottom: 0;
-        @include arrow-down($popup-arrow-size, $gray9, $gray9);
+        @include arrow-down($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
       }
     }
     &.arrow-left { 
-      padding-right: $popup-arrow-size; 
+      padding-right: $callout-arrow-size; 
       & > .arrow {
         right: 0;
-        @include arrow-right($popup-arrow-size, $gray9, $gray9);
+        @include arrow-right($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
       }
     }
     &.arrow-right { 
-      padding-left: $popup-arrow-size; 
+      padding-left: $callout-arrow-size; 
       & > .arrow {
         left: 0;
-        @include arrow-left($popup-arrow-size, $gray9, $gray9);
+        @include arrow-left($callout-arrow-size, $callout-bg-color, $callout-border-width, $callout-border-color);
       }
     }
 
@@ -163,12 +162,12 @@ $popup-border-radius: 6px;
       }
       &.left {
         & > .arrow {
-          left: $popup-arrow-offset;
+          left: $callout-arrow-offset;
         }
       }
       &.right {
         & > .arrow {
-          right: $popup-arrow-offset;
+          right: $callout-arrow-offset;
         }
       }
     }
@@ -182,19 +181,28 @@ $popup-border-radius: 6px;
       }
       &.top {
         & > .arrow {
-          top: $popup-arrow-offset;
+          top: $callout-arrow-offset;
         }
       }
       &.bottom {
         & > .arrow {
-          bottom: $popup-arrow-offset;
+          bottom: $callout-arrow-offset;
         }
       }
     }
   }
 
   .reveal-content-wrap {
-    border-radius: $popup-border-radius;
+    padding: 10px;
+    background: $callout-bg-color;
+    border: 1px solid $callout-border-color;
+    border-radius: 10px;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      text-rendering: optimizeLegibility; /* fixes bug in chrome where height is incorrectly calculated */
+    }
   }
 }
 

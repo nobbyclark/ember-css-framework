@@ -2,6 +2,7 @@ App.PopupView = App.DropdownView.extend({
   classNames: ['reveal-popup'],
   offset: 10,
   position: 'top-center',
+  text: "Zoltan is a cool guy? No Nick is a way cooler dude bro. fnain nfianfa",
 
   onToggleReveal: function() {
     
@@ -101,7 +102,6 @@ App.PopupView = App.DropdownView.extend({
       
     }
 
-    // Set position
     content.css({
       top: yPos,
       left: xPos

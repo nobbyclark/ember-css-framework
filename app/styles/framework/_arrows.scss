@@ -1,23 +1,3 @@
-//
-// Arrows
-// --------------------------------------------------
-
-
-// Variables
-// --------------------------------------------------
-
-// dimensions
-$arrow-border-width:         1px            !default;
-$default-arrow-width:        10px;
-
-// colors
-$default-arrow-bg-color:             #ffffff        !default;
-$default-arrow-border-color:         #b8b8b8        !default;
-
-
-// SASS
-// --------------------------------------------------
-
 %arrow {
   position: absolute;
   width: 0;
@@ -31,7 +11,7 @@ $default-arrow-border-color:         #b8b8b8        !default;
   }
 }
 
-@mixin arrow-up($arrow-width, $arrow-bg-color, $arrow-border-color) {
+@mixin arrow-up($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: 0 $arrow-width $arrow-width $arrow-width;
   border-bottom-color: $arrow-border-color;
@@ -45,7 +25,7 @@ $default-arrow-border-color:         #b8b8b8        !default;
   }
 }
 
-@mixin arrow-right($arrow-width, $arrow-bg-color, $arrow-border-color) {
+@mixin arrow-right($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width 0 $arrow-width $arrow-width;
   border-left-color: $arrow-border-color;
@@ -59,7 +39,7 @@ $default-arrow-border-color:         #b8b8b8        !default;
   }
 }
 
-@mixin arrow-down($arrow-width, $arrow-bg-color, $arrow-border-color) {
+@mixin arrow-down($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width $arrow-width 0 $arrow-width;
   border-top-color: $arrow-border-color;
@@ -73,7 +53,7 @@ $default-arrow-border-color:         #b8b8b8        !default;
   }
 }
 
-@mixin arrow-left($arrow-width, $arrow-bg-color, $arrow-border-color) {
+@mixin arrow-left($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width $arrow-width $arrow-width 0;
   border-right-color: $arrow-border-color;
