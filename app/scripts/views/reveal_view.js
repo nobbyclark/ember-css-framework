@@ -17,7 +17,20 @@ App.RevealView = Ember.View.extend({
 
   actions: {
     toggleReveal: function() {
-      this.toggleProperty('isOpen');
+      var self = this,
+          isOpen = this.get('isOpen'), // must be stored BEFORE closing other dropdowns
+          siblingViews = this.get('parentView.childViews');
+      
+      // allow only one dropdown to be open at a time
+      siblingViews.forEach(function(view) {
+        if (view.constructor === self.constructor) {
+          view.set('isOpen', false);
+        }
+      });
+      
+      if (!isOpen) {
+        this.toggleProperty('isOpen');
+      }
     }
   }
 });
