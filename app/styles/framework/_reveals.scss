@@ -6,7 +6,7 @@
 .reveal {
   position: relative;
 
-  .reveal-toggle {
+  & > .reveal-toggle {
     &.btn {
       transition: 300ms border-radius;
     }
@@ -17,14 +17,14 @@
     }
   }
 
-  .reveal-content {
+  & > .reveal-content {
     height: 0;
     overflow: hidden;
     transition: height 300ms;
-  }
 
-  .wrap {
-    @include clearfix;
+    & > .wrap {
+      @include clearfix;
+    }
   }
 }
 
@@ -32,7 +32,7 @@
 // ----------------
 .reveal.open {
 
-  .reveal-toggle {
+  & > .reveal-toggle {
     &.btn-icon {
       .icon {
         -webkit-transform: rotate(180deg);
@@ -106,25 +106,18 @@ $dropdown-border-radius: 4px;
 .reveal-popup {
   position: absolute;
   
-  .reveal-content {
-    width: 100px;
+  & > .reveal-content {
+    position: absolute;
     height: auto;
+    overflow: visible;
     opacity: 0;
     z-index: -1;
     transition: opacity 300ms, z-index 0s 300ms;
   }
 
-  .wrap {
-    padding: 10px;
-    background: $gray9;;
-    border: 1px solid $gray9;
-    border-radius: 5px;
-
-    p {
-      margin: 0;
-      font-size: 13px;
-      text-rendering: optimizeLegibility; /* fixes bug in chrome where height is incorrectly calculated */
-    }
+  p {
+    margin: 0;
+    font-size: 13px;
   }
 }
 
@@ -132,7 +125,7 @@ $dropdown-border-radius: 4px;
 // --------------------------
 .reveal-popup.open {
 
-  .reveal-content {
+  & > .reveal-content {
     z-index: 999;
     opacity: 1;
     transition: opacity 300ms;

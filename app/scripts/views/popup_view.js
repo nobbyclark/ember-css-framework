@@ -1,4 +1,4 @@
-App.PopupView = App.DropdownView.extend({
+App.PopupView = App.RevealView.extend({
   classNames: ['reveal-popup'],
   offset: 10,
   position: 'top-center',

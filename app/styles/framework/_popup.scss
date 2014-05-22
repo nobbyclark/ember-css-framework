@@ -6,6 +6,7 @@ $callout-bg-color: white;
 $callout-border-color: $gray6;
 
 .popup {
+  width: 200px;
 
   &.arrow-bottom { 
     padding-top: $callout-arrow-size;
@@ -51,6 +52,7 @@ $callout-border-color: $gray6;
   }
 
   & > .wrap {
+    padding: 10px;
     background: $callout-bg-color;
     border: 1px solid $callout-border-color;
     border-radius: 10px;
