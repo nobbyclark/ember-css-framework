@@ -1,3 +1,14 @@
+.reveal-dropdown {
+
+  & > .reveal-toggle {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-lrg;
+    @extend .btn-block;
+    @extend .btn-icon;
+  }
+}
+
 .dropdown {
   
   & > .wrap {

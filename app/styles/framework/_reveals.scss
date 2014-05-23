@@ -7,11 +7,9 @@
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
-    &.btn-icon {
-      .icon {
-        -webkit-transition: -webkit-transform 300ms;
-        transition: transform 300ms;
-      }
+    & > .icon {
+      -webkit-transition: -webkit-transform 300ms;
+      transition: transform 300ms;
     }
   }
 
@@ -23,11 +21,9 @@
 
   &.open {
     & > .reveal-toggle {
-      &.btn-icon {
-        .icon {
-          -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-        }
+      & > .icon {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
       }
     }
   }
@@ -72,9 +68,7 @@
 .reveal-dropdown {
 
   & > .reveal-toggle {
-    &.btn {
-      transition: 300ms border-radius;
-    }
+    transition: 300ms border-radius;
   }
 
   & > .reveal-content {
@@ -86,10 +80,8 @@
 
   &.open {
     .reveal-toggle {
-      &.btn {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 }

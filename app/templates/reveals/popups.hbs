@@ -91,53 +91,12 @@
 
           
 
-          {{#view App.PopupView position="bottom-center" id="popup-example-1"}}
-            <button class="reveal-toggle btn btn-primary" {{action "toggleReveal" target=view bubbles=false}}>Top nianf ianf ianfia nif </button>
-            <div class="reveal-content popup popup-menu">
+          {{#view App.PopupView position="bottom-center"}}
+            <button {{bind-attr class="view.revealToggle :btn :btn-primary"}} {{action "toggleReveal" target=view bubbles=false}}>Top nianf ianf ianfia nif </button>
+            <div {{bind-attr class="view.revealContent :popup :popup-menu"}}>
               <div class="arrow"></div>
-              <div class="wrap">
+              <div {{bind-attr class="view.revealWrap"}}>
                 <p>Top - Center</p>
-              </div>
-            </div>
-          {{/view}}
-
-          {{#view App.PopupView position="bottom-center" id="popup-example-2"}}
-            <button class="reveal-toggle btn btn-primary" {{action "toggleReveal" target=view bubbles=false}}>Bottom</button>
-            <div class="reveal-content popup popup-menu">
-              <div class="arrow"></div>
-              <div class="wrap">
-                <p>Bottom - Center</p>
-              </div>
-            </div>
-          {{/view}}
-
-          {{#view App.PopupView position="left-center" id="popup-example-3"}}
-            <button class="reveal-toggle btn btn-primary" {{action "toggleReveal" target=view bubbles=false}}>Left</button>
-            <div class="reveal-content popup popup-menu">
-              <div class="arrow"></div>
-              <div class="wrap">
-                <p>Left - Center</p>
-              </div>
-            </div>
-          {{/view}}
-
-          {{#view App.PopupView position="bottom-right" id="popup-example-4"}}
-            <button class="reveal-toggle btn btn-primary" {{action "toggleReveal" target=view bubbles=false}}>Right fnaifn ainf ianf ian</button>
-            <div class="reveal-content popup">
-              <div class="arrow"></div>
-              <div class="wrap">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco.</p>
-                {{#view App.PopupView position="right-center" id="popup-example-5"}}
-                  <button class="reveal-toggle btn btn-primary" {{action "toggleReveal" target=view bubbles=false}}>Cog</button>
-                  <div class="reveal-content popup popup-menu">
-                    <div class="arrow"></div>
-                    <div class="wrap">
-                      <p>Right - Center</p>
-                    </div>
-                  </div>
-                {{/view}}
               </div>
             </div>
           {{/view}}

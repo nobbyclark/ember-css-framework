@@ -3,20 +3,16 @@ App.PopupView = App.RevealView.extend({
   offset: 10,
   position: 'top-center',
 
-  onToggleReveal: function() {
-    // override default
-  },
-
   didInsertElement: function() {
-    var toggle = this.$('.reveal-toggle'),
+    var toggle = this.$('.' + this.revealToggle),
         toggleWidth = toggle.outerWidth(),
         toggleHeight = toggle.outerHeight(),
 
-        content = this.$('.reveal-content'),
+        content = this.$('.' + this.revealContent),
         contentWidth = 0,
         contentHeight = 0,
 
-        arrow = this.$('.reveal-content > .arrow'),
+        arrow = this.$('.' + this.revealContent + ' > .arrow'),
         arrowOffset = 0,
         arrowWidth = 0,
         arrowHeight = 0,
@@ -106,5 +102,11 @@ App.PopupView = App.RevealView.extend({
       left: xPos
     });
 
+  },
+
+  actions: {
+    toggleReveal: function() {
+      this.closeOnClickAway();
+    }
   }
 });

@@ -1,3 +1,14 @@
 App.DropdownView = App.RevealView.extend({
-  classNames: ['reveal-dropdown']
+  layoutName: 'layouts/dropdown_layout',
+  classNames: ['reveal-dropdown'],
+
+  onToggleReveal: function() {
+    this.calculateHeight();
+  }.observes('isOpen'),
+
+  actions: {
+    toggleReveal: function() {
+      this.closeOnClickAway();
+    }
+  }
 });
