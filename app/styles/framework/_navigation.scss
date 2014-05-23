@@ -9,6 +9,7 @@
     & > a {
       display: block;
       padding: 8px 12px;
+      transition: color 300ms, background-color 300ms;
 
       &:hover {
         text-decoration: none;

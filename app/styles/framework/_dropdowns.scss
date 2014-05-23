@@ -1,0 +1,35 @@
+.dropdown {
+  
+  & > .wrap {
+    overflow: hidden;
+    background: $gray9;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.dropdown-menu {
+
+  .nav-list {
+    max-height: 200px;
+    overflow: auto;
+
+    & > li {
+      border-top: 1px solid $gray10;
+
+      & > a {
+        color: $gray4;
+        font-weight: 300;
+
+        & > .subtext {
+          float: right;
+        }
+
+        &:hover {
+          color: white;
+          background: $gray7;
+        }
+      }
+    }
+  }
+}

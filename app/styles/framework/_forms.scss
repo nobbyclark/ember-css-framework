@@ -111,6 +111,7 @@ input {
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     user-select: none;
+    transition: color 300ms;
 
       &:before{
         content: "";
@@ -151,6 +152,7 @@ input {
 
   input:checked {
     & + label {
+      color: $gray10;
       &:before {
         border-color: $blue;
       }

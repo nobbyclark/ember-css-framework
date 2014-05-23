@@ -108,19 +108,9 @@ $popup-menu-border-color: $gray9;
   }
 
   & > .wrap {
+    color: $gray2;
     background: $popup-menu-bg-color;
     border: 1px solid $popup-menu-border-color;
     border-radius: 4px;
-
-    p {
-      color: white;
-    }
   }
 }
-
-
-
-
-
-
-

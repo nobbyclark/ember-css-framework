@@ -3,11 +3,11 @@
   <div class="example">
     <div class="example-section">
       <div class="example-description">
-        <h2 class="section-heading">Reveals</h2>
-        <p>Welcome to the <strong>buttons</strong> section.</p>
+        <h2 class="section-heading">Popups</h2>
+        <p>Welcome to the <strong>popups</strong> section.</p>
       </div>
       <div class="example-code">
-        <pre class="codehilite"><span class="c">&lt;!-- Reveals --&gt;</span></pre>
+        <pre class="codehilite"><span class="c">&lt;!-- Popups --&gt;</span></pre>
       </div>
     </div>
   </div><!-- /.example -->
@@ -15,50 +15,67 @@
   <div class="example">
     <div class="example-section">
       <div class="example-description">
-        <h3 class="h4">Panels</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.</p>
-        {{#view App.PanelView}}
-          <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}><span class="text">Reveal Toggle</span><span class="icon">&blacktriangledown;</span></button>
-          <div class="reveal-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-            </div>
+        <h3 class="h4">Popup styles</h3>
+        
+        <div class="popup arrow-top center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </div>
-        {{/view}}
+        </div>
 
-        {{#view App.PanelView}}
-          <button class="reveal-toggle btn btn-default btn-icon btn-lrg btn-block" {{action "toggleReveal" target=view bubbles=false}}><span class="text">Reveal Toggle</span><span class="icon">&blacktriangledown;</span></button>
-          <div class="reveal-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-            </div>
+        <div class="popup arrow-bottom center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </div>
-        {{/view}}
+        </div>
+
+        <div class="popup arrow-left center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="popup arrow-right center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="popup popup-menu arrow-top center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="popup popup-menu arrow-bottom center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="popup popup-menu arrow-left center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="popup popup-menu arrow-right center" style="position: relative;">
+          <div class="arrow"></div>
+          <div class="wrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
       </div>
       <div class="example-code">
-        
-      </div>
-    </div>
-  </div><!-- /.example -->
-
-  <div class="example">
-    <div class="example-section">
-      <div class="example-description">
-        <h3 class="h4">Dropdowns</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.</p>
-        {{#view App.DropdownView}}
-          <button {{bind-attr class="view.isOpen:active :reveal-toggle :btn :btn-primary :btn-lrg :btn-block :btn-icon"}} {{action "toggleReveal" target=view bubbles=false}}><span class="text">Select an audience</span><span class="icon">&blacktriangledown;</span><span class="subtext">245,439</span></button>
-          <div class="reveal-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, asperiores earum doloribus deleniti recusandae eum dolores nostrum possimus placeat reprehenderit odit ullam molestias rerum mollitia quisquam optio vel aperiam id?</p>
-            </div>
-          </div>
-        {{/view}}
-      </div>
-      <div class="example-code">
-        
+        <pre class="codehilite"><span class="c">&lt;!-- Popups --&gt;</span></pre>
       </div>
     </div>
   </div><!-- /.example -->

@@ -2,5 +2,10 @@ App.Router.map(function () {
   this.route('type');
   this.route('buttons');
   this.route('forms');
-  this.route('reveals');
+  this.route('popups');
+  this.resource('reveals', function() {
+    this.route('panels');
+    this.route('dropdowns');
+    this.route('popups');
+  });
 });
