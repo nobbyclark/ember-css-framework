@@ -1,4 +1,5 @@
 App.PopupView = App.RevealView.extend({
+  layoutName: 'layouts/popup_layout',
   classNames: ['reveal-popup'],
   offset: 10,
   position: 'top-center',

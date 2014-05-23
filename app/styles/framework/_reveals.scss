@@ -3,6 +3,11 @@
   position: relative;
 
   & > .reveal-toggle {
+    @extend .btn;
+    @extend .btn-lrg;
+    @extend .btn-block;
+    @extend .btn-icon;
+
     /* fixes flicker in Safari */
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-perspective: 1000;
@@ -37,18 +42,17 @@
   border-bottom: 2px solid $gray4;
 
   & > .reveal-toggle {
-    &.btn {
-      padding-left: 0;
-      padding-right: 0;
-      color: $gray6;
-      font-weight: 600;
-      border: none;
-      transition: color 300ms;
+    @extend .btn-default;
+    padding-left: 0;
+    padding-right: 0;
+    color: $gray6;
+    font-weight: 600;
+    border: none;
+    transition: color 300ms;
 
-      &:hover,
-      &:active {
-        background: none;
-      }
+    &:hover,
+    &:active {
+      background: none;
     }
   }
 
@@ -68,6 +72,7 @@
 .reveal-dropdown {
 
   & > .reveal-toggle {
+    @extend .btn-primary;
     transition: 300ms border-radius;
   }
 
@@ -92,6 +97,11 @@
 
 .reveal-popup {
   position: absolute;
+
+  & > .reveal-toggle {
+    @extend .btn;
+    @extend .btn-default;
+  }
   
   & > .reveal-content {
     position: absolute;

@@ -1,15 +1,4 @@
-.reveal-dropdown {
-
-  & > .reveal-toggle {
-    @extend .btn;
-    @extend .btn-primary;
-    @extend .btn-lrg;
-    @extend .btn-block;
-    @extend .btn-icon;
-  }
-}
-
-.dropdown {
+.dropdown-menu {
   
   & > .wrap {
     overflow: hidden;
@@ -17,9 +6,6 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-}
-
-.dropdown-menu {
 
   .nav-list {
     max-height: 200px;
