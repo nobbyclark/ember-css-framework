@@ -1,9 +1,0 @@
-<button {{bind-attr class="view.revealToggle"}} {{action "toggleReveal" target=view bubbles=false}}>
-  <span class="text">Reveal Toggle</span>
-  <span class="icon">&blacktriangledown;</span>
-</button>
-<div {{bind-attr class="view.revealContent"}}>
-  <div {{bind-attr class="view.revealWrap"}}>
-    {{yield}}
-  </div>
-</div>
