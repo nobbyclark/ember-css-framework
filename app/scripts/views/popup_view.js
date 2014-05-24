@@ -2,42 +2,34 @@ App.PopupView = App.RevealView.extend({
   layoutName: 'layouts/popup_layout',
   classNames: ['reveal-popup'],
 
+  arrowClass: 'arrow',
+
   offset: 10,
-  position: 'top-center',
+  popupAlign: 'top',
+  arrowAlign: 'center',
 
   didInsertElement: function() {
+
     var toggle = this.$('.' + this.toggleClass),
         toggleWidth = toggle.outerWidth(),
         toggleHeight = toggle.outerHeight(),
 
         content = this.$('.' + this.contentClass),
-        contentWidth = 0,
-        contentHeight = 0,
+        contentWidth = content.outerWidth(),
+        contentHeight = content.outerHeight(),
 
-        arrow = this.$('.' + this.contentClass + ' > .arrow'),
+        arrow = this.$('.' + this.contentClass + ' > .' + this.get('arrowClass')),
         arrowOffset = 0,
-        arrowWidth = 0,
-        arrowHeight = 0,
+        arrowWidth = arrow.outerWidth(),
+        arrowHeight = arrow.outerHeight(),
 
-        // distance from toggle
         offset = this.get('offset'),
 
-        position = this.get('position').split('-'),
-        a = position[0],
-        b = position[1],
-        xPos,
-        yPos;
+        a = this.get('popupAlign'),
+        b = this.get('arrowAlign'),
 
-    // Add correct arrow class
-    content.addClass('arrow-' + a + ' ' + b);
-
-    // get height AFTER arrow check otherwise
-    // height wont take arrow height into account
-    contentWidth = content.outerWidth();
-    contentHeight = content.outerHeight();
-
-    arrowWidth = arrow.outerWidth();
-    arrowHeight = arrow.outerHeight();
+        xPos = 0,
+        yPos = 0;
 
     if (a === 'top' || a === 'bottom') {
 
@@ -61,6 +53,7 @@ App.PopupView = App.RevealView.extend({
         xPos = toggleWidth - contentWidth;
 
         if (toggleWidth < contentWidth) {
+          console.log('yes');
           arrowOffset = contentWidth - arrow.position().left - arrowWidth;
           xPos += (arrowOffset + ((arrowWidth / 2) - (toggleWidth / 2)));
         }
@@ -70,6 +63,8 @@ App.PopupView = App.RevealView.extend({
     }
 
     if (a === 'left' || a === 'right') {
+
+      console.log(a);
 
       if (a === 'left') {
         xPos = -(contentWidth + offset);

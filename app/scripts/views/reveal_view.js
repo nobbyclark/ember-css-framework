@@ -38,11 +38,11 @@ App.RevealView = Ember.View.extend(App.RevealMixin, {
   classNameBindings: ['isOpen:open'],
   isOpen: false,
 
-  contentClass: 'reveal-content',
-  contentWrapClass: 'reveal-content-wrap',
-  toggleClass: 'reveal-toggle',
+  contentClass: 'content',
+  contentWrapClass: 'wrap',
+  toggleClass: 'toggle',
 
-  text: "Toggle",
+  text: 'Toggle',
 
   actions: {
     toggleReveal: function() {
