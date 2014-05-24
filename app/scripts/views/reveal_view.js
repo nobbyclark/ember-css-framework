@@ -1,17 +1,15 @@
 App.RevealMixin = Ember.Mixin.create({
 
   calculateHeight: function() {
-
-    var revealContentSelector = '.' + this.revealContent,
-        revealWrapSelector = '.' + this.revealWrap,
-        el = this.$(revealContentSelector);
+    var contentSelector = '.' + this.contentClass,
+        contentWrapSelector = '.' + this.contentWrapClass,
+        el = this.$(contentSelector);
 
     if (this.get('isOpen')) {
-      el.css('height', this.$(revealContentSelector + '>' + revealWrapSelector).outerHeight());
+      el.css('height', this.$(contentSelector + ' > ' + contentWrapSelector).outerHeight());
     } else {
-      el.css('height', "");
+      el.css('height', '');
     }
-
   },
 
   closeOnClickAway: function() {
@@ -36,13 +34,15 @@ App.RevealMixin = Ember.Mixin.create({
 });
 
 App.RevealView = Ember.View.extend(App.RevealMixin, {
-  isOpen: false,
+  layoutName: 'layouts/reveal_layout',
   classNameBindings: ['isOpen:open'],
-  revealContent: 'reveal-content',
-  revealWrap: 'wrap',
-  revealToggle: 'reveal-toggle',
-  text: "Text",
-  subtext: "Subtext",
+  isOpen: false,
+
+  contentClass: 'reveal-content',
+  contentWrapClass: 'reveal-content-wrap',
+  toggleClass: 'reveal-toggle',
+
+  text: "Toggle",
 
   actions: {
     toggleReveal: function() {

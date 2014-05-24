@@ -1,11 +1,8 @@
-.dropdown-menu {
-  
-  & > .wrap {
-    overflow: hidden;
-    background: $gray9;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
+.dropdown {
+  background: $gray9;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow: hidden;
 
   .nav-list {
     max-height: 200px;

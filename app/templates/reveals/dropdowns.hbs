@@ -17,13 +17,15 @@
       <div class="example-description">
         <h3 class="h4">Classic Dropdown</h3>
 
-        {{#view App.DropdownView text="Select and audience" subtext="5000 Users"}}
-          <ul class="nav-list">
-            <li><a href="#">Nerds <span class="subtext">5000 Users</span></a></li>
-            <li><a href="#">Nice guys <span class="subtext">10,000 Users</span></a></li>
-            <li><a href="#">Gangsters <span class="subtext">20,000 Users</span></a></li>
-            <li><a href="#">Hipsters <span class="subtext">100 Users</span></a></li>
-          </ul>
+        {{#view App.DropdownView text="Select and audience" subtext="5000 Users" icon="&blacktriangledown;"}}
+          <div class="dropdown">
+            <ul class="nav-list">
+              <li><a href="#">Nerds <span class="subtext">5000 Users</span></a></li>
+              <li><a href="#">Nice guys <span class="subtext">10,000 Users</span></a></li>
+              <li><a href="#">Gangsters <span class="subtext">20,000 Users</span></a></li>
+              <li><a href="#">Hipsters <span class="subtext">100 Users</span></a></li>
+            </ul>
+          </div>
         {{/view}}
 
       </div>

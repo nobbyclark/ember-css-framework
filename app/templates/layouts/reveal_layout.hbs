@@ -1,0 +1,11 @@
+<button class="{{unbound view.toggleClass}}" {{action "toggleReveal" target=view bubbles=false}}>
+  {{#if view.text}}<span class="text">{{view.text}}</span>{{/if}}
+  {{#if view.icon}}<span class="icon">{{{unbound view.icon}}}</span>{{/if}}
+  {{#if view.subtext}}<span class="subtext">{{view.subtext}}</span>{{/if}}
+</button>
+<div class="{{unbound view.contentClass}}">
+  <div class="arrow"></div>
+  <div class="{{unbound view.contentWrapClass}}">
+    {{yield}}
+  </div>
+</div>

@@ -1,6 +1,6 @@
 App.DropdownView = App.RevealView.extend({
-  layoutName: 'layouts/dropdown_layout',
   classNames: ['reveal-dropdown'],
+  icon: '&blacktriangledown;',
 
   onToggleReveal: function() {
     this.calculateHeight();

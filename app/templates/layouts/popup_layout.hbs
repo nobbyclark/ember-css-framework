@@ -1,7 +1,7 @@
-<button {{bind-attr class="view.revealToggle"}} {{action "toggleReveal" target=view bubbles=false}}>{{view.text}}</button>
-<div {{bind-attr class="view.revealContent :popup :popup-menu"}}>
+<button class="{{unbound view.toggleClass}}" {{action "toggleReveal" target=view bubbles=false}}>{{unbound view.text}}</button>
+<div class="{{unbound view.contentClass}}">
   <div class="arrow"></div>
-  <div {{bind-attr class="view.revealWrap"}}>
+  <div class="{{unbound view.contentWrapClass}}">
     {{yield}}
   </div>
 </div>

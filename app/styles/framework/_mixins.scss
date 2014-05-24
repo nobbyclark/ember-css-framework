@@ -37,3 +37,60 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+@mixin popup($width, $padding, $background-color, $border-width, $border-color, $border-radius, $arrow-size, $arrow-offset) {
+
+  & > .reveal-content {
+    width: $width;
+
+    &.arrow-bottom { 
+      padding-top: $arrow-size;
+      & > .arrow {
+        top: 0;
+        @include arrow-up($arrow-size, $background-color, $border-width, $border-color);
+      }
+    }
+    &.arrow-top { 
+      padding-bottom: $arrow-size; 
+      & > .arrow {
+        bottom: 0;
+        @include arrow-down($arrow-size, $background-color, $border-width, $border-color);
+      }
+    }
+    &.arrow-left { 
+      padding-right: $arrow-size; 
+      & > .arrow {
+        right: 0;
+        @include arrow-right($arrow-size, $background-color, $border-width, $border-color);
+      }
+    }
+    &.arrow-right { 
+      padding-left: $arrow-size; 
+      & > .arrow {
+        left: 0;
+        @include arrow-left($arrow-size, $background-color, $border-width, $border-color);
+      }
+    }
+
+    &.arrow-bottom,
+    &.arrow-top {
+      &.center > .arrow { @include abs-center-horizontal; }
+      &.left > .arrow { left: $arrow-offset; }
+      &.right > .arrow { right: $arrow-offset; }
+    }
+
+    &.arrow-left,
+    &.arrow-right {
+      &.center > .arrow { @include abs-center-vertical; }
+      &.top > .arrow { top: $arrow-offset; }
+      &.bottom > .arrow { bottom: $arrow-offset; }
+    }
+
+    & > .reveal-content-wrap {
+      padding: $padding;
+      background: $background-color;
+      border: $border-width solid $border-color;
+      border-radius: $border-radius;
+    }
+  }
+}

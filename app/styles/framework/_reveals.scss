@@ -4,8 +4,6 @@
 
   & > .reveal-toggle {
     @extend .btn;
-    @extend .btn-lrg;
-    @extend .btn-block;
     @extend .btn-icon;
 
     /* fixes flicker in Safari */
@@ -43,6 +41,7 @@
 
   & > .reveal-toggle {
     @extend .btn-default;
+    @extend .btn-block;
     padding-left: 0;
     padding-right: 0;
     color: $gray6;
@@ -58,8 +57,10 @@
 
   &.open {
      & > .reveal-toggle {
-      &.btn {
-        color: $gray10;
+      color: $gray10;
+
+      &.active {
+        background: none;
       }
     }
   }
@@ -84,7 +85,7 @@
   }
 
   &.open {
-    .reveal-toggle {
+    & > .reveal-toggle {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -119,4 +120,9 @@
       transition: opacity 300ms;
     }
   }
+
+  // Popup Styles
+  // $width, $padding, $background-color, $border-width, $border-color, $border-radius, $arrow-size, $arrow-offset)
+  &.default { @include popup(200px, 10px, #ffffff, 1px, $gray6, 10px, 12px, 12px); }
+  &.primary { @include popup(auto, 10px, $gray6, 5px, $gray6, 10px, 12px, 12px); }
 }

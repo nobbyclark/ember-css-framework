@@ -1,19 +1,20 @@
 App.PopupView = App.RevealView.extend({
   layoutName: 'layouts/popup_layout',
   classNames: ['reveal-popup'],
+
   offset: 10,
   position: 'top-center',
 
   didInsertElement: function() {
-    var toggle = this.$('.' + this.revealToggle),
+    var toggle = this.$('.' + this.toggleClass),
         toggleWidth = toggle.outerWidth(),
         toggleHeight = toggle.outerHeight(),
 
-        content = this.$('.' + this.revealContent),
+        content = this.$('.' + this.contentClass),
         contentWidth = 0,
         contentHeight = 0,
 
-        arrow = this.$('.' + this.revealContent + ' > .arrow'),
+        arrow = this.$('.' + this.contentClass + ' > .arrow'),
         arrowOffset = 0,
         arrowWidth = 0,
         arrowHeight = 0,
