@@ -1,0 +1,65 @@
+[class^="glyphicon-"], [class*=" glyphicon-"] {
+  font-family: 'glyphicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-down:before {
+  content: "\e60d";
+}
+.glyphicon-chevron-left:before {
+  content: "\e60e";
+}
+.glyphicon-chevron-right:before {
+  content: "\e60f";
+}
+.glyphicon-chevron-up:before {
+  content: "\e610";
+}
+.glyphicon-message-video:before {
+  content: "\e600";
+}
+.glyphicon-message-text:before {
+  content: "\e601";
+}
+.glyphicon-message-push:before {
+  content: "\e602";
+}
+.glyphicon-message-link:before {
+  content: "\e603";
+}
+.glyphicon-message-image:before {
+  content: "\e604";
+}
+.glyphicon-message-fake-call:before {
+  content: "\e605";
+}
+.glyphicon-user:before {
+  content: "\e606";
+}
+.glyphicon-settings:before {
+  content: "\e607";
+}
+.glyphicon-messages:before {
+  content: "\e608";
+}
+.glyphicon-edit:before {
+  content: "\e609";
+}
+.glyphicon-audiences:before {
+  content: "\e60a";
+}
+.glyphicon-analytics:before {
+  content: "\e60b";
+}
+.glyphicon-admin:before {
+  content: "\e60c";
+}

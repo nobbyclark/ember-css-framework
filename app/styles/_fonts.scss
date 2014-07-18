@@ -107,3 +107,14 @@
   font-weight: 800;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'glyphicons';
+  src:url('fonts/glyphicons.eot?');
+  src:url('fonts/glyphicons.eot?#iefix') format('embedded-opentype'),
+    url('fonts/glyphicons.woff?') format('woff'),
+    url('fonts/glyphicons.ttf?') format('truetype'),
+    url('fonts/glyphicons.svg?#glyphicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
