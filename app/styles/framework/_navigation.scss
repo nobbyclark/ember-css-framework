@@ -17,3 +17,29 @@
     }
   }
 }
+
+// Popup
+// --------------------------
+
+.reveal-popup.menu {
+
+  .nav-list {
+    & > li {
+      & > a {
+        color: $gray7;
+        text-align: center;
+        border-bottom: 1px solid $gray9;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &:last-of-type {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

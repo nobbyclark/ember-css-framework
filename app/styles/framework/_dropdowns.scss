@@ -1,5 +1,5 @@
 .dropdown {
-  background: $gray9;
+  background: $gray10;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   overflow: hidden;
@@ -9,10 +9,10 @@
     overflow: auto;
 
     & > li {
-      border-top: 1px solid $gray10;
+      border-top: 1px solid $gray9;
 
       & > a {
-        color: $gray4;
+        color: $gray7;
         font-weight: 300;
 
         & > .subtext {
@@ -21,7 +21,6 @@
 
         &:hover {
           color: white;
-          background: $gray7;
         }
       }
     }
