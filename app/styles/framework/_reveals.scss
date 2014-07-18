@@ -133,6 +133,6 @@ $reveal-popup--content--border-width:     1px;
 
   // Popup Styles
   // $width, $padding, $background-color, $border-width, $border-color, $border-radius, $arrow-size, $arrow-offset)
-  &.menu { @include popup(150px, 0px, $reveal-popup--content--background-color, $reveal-popup--content--border-width, $reveal-popup--content--background-color, 5px, 12px, 12px); }
+  &.default-menu { @include popup(150px, 0px, $reveal-popup--content--background-color, $reveal-popup--content--border-width, $reveal-popup--content--background-color, 5px, 12px, 12px); }
   &.bordered { @include popup(200px, 10px, #ffffff, $reveal-popup--content--border-width, $gray6, 10px, 12px, 12px); }
 }
