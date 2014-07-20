@@ -132,9 +132,11 @@
   padding: 0;
   background: none;
   border: none;
+  color: $gray5;
+  transition: color 300ms;
 
   &:hover {
-    background: none;
+    color: $gray9;
   }
 
   &:focus {

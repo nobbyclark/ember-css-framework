@@ -2,7 +2,6 @@ App.PopupView = App.RevealView.extend({
   layoutName: 'layouts/popup_layout',
   classNames: ['reveal-popup'],
 
-  toggleClasses: '',
   arrowClass: 'arrow',
 
   offset: 10,

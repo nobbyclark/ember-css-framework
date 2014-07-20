@@ -1,4 +1,4 @@
-<button class="{{unbound view.toggleClass}}" {{action "toggleReveal" target=view bubbles=false}}>
+<button class="{{unbound view.toggleClass}} {{unbound view.toggleClasses}}" {{action "toggleReveal" target=view bubbles=false}}>
   {{#if view.text}}<span class="text">{{view.text}}</span>{{/if}}
   {{#if view.icon}}<span class="icon">{{{unbound view.icon}}}</span>{{/if}}
   {{#if view.subtext}}<span class="subtext">{{view.subtext}}</span>{{/if}}

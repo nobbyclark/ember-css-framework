@@ -108,6 +108,10 @@ $reveal-popup--content--border-width:     1px;
 
 .reveal-popup {
   position: absolute;
+
+  & > .toggle {
+    display: block;
+  }
   
   & > .content {
     position: absolute;
@@ -131,19 +135,9 @@ $reveal-popup--content--border-width:     1px;
   &.default-menu { @include popup(160px, 0px, $reveal-popup--content--background-color, $reveal-popup--content--border-width, $reveal-popup--content--background-color, 5px, 10px, 10px); }
   &.bordered { @include popup(200px, 10px, #ffffff, $reveal-popup--content--border-width, $gray6, 10px, 12px, 12px); }
 
-  & > .toggle.btn-glyphicon {
-    display: block;
-    opacity: 0.5;
-    transition: 300ms;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
   &.open {
-    & > .toggle {
-      opacity: 1;
+    & > .toggle.btn-glyphicon {
+      color: $gray9;
     }
   }
 }
