@@ -127,3 +127,17 @@
     margin-left: 12px;
   }
 }
+
+.btn-glyphicon {
+  padding: 0;
+  background: none;
+  border: none;
+
+  &:hover {
+    background: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

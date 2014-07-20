@@ -2,6 +2,7 @@ App.PopupView = App.RevealView.extend({
   layoutName: 'layouts/popup_layout',
   classNames: ['reveal-popup'],
 
+  btnClasses: '',
   arrowClass: 'arrow',
 
   offset: 10,
@@ -53,18 +54,12 @@ App.PopupView = App.RevealView.extend({
         xPos = toggleWidth - contentWidth;
 
         if (toggleWidth < contentWidth) {
-          console.log('yes');
           arrowOffset = contentWidth - arrow.position().left - arrowWidth;
           xPos += (arrowOffset + ((arrowWidth / 2) - (toggleWidth / 2)));
         }
-
       }
 
-    }
-
-    if (a === 'left' || a === 'right') {
-
-      console.log(a);
+    } else if (a === 'left' || a === 'right') {
 
       if (a === 'left') {
         xPos = -(contentWidth + offset);
@@ -89,9 +84,7 @@ App.PopupView = App.RevealView.extend({
           arrowOffset = contentHeight - arrow.position().top - arrowHeight;
           yPos += (arrowOffset + ((arrowHeight / 2) - (toggleHeight / 2)));
         }
-        
       }
-      
     }
 
     content.css({
