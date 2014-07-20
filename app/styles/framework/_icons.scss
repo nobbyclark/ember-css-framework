@@ -10,8 +10,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  &.sml { font-size: 16px; width: 16px; height: 16px; }
 }
 
 .glyphicon-chevron-down:before {
@@ -65,3 +63,5 @@
 .glyphicon-admin:before {
   content: "\e60c";
 }
+
+.glyphicon-sml { font-size: 16px; width: 16px; height: 16px; }
