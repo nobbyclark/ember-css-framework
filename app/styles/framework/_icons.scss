@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.glyphicon-info:before {
+  content: "\e611";
+}
 .glyphicon-chevron-down:before {
   content: "\e60d";
 }
