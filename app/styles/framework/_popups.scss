@@ -16,26 +16,46 @@
 
 */
 
-$popup-default-width: 160px;
-$popup-default-padding: 0px;
-$popup-default-background-color: $gray10;
-$popup-default-border-width: 1px;
-$popup-default-border-color: $gray10;
-$popup-default-border-radius: 5px;
-$popup-default-arrow-size: 10px;
-$popup-default-arrow-offset: 10px;
+$popup-menu-width: 160px;
+$popup-menu-padding: 0px;
+$popup-menu-background-color: $gray10;
+$popup-menu-border-width: 1px;
+$popup-menu-border-color: $gray10;
+$popup-menu-border-radius: 5px;
+$popup-menu-arrow-size: 10px;
+$popup-menu-arrow-offset: 10px;
 
-.popup-default { 
+.popup-menu { 
   @include popup(
-    $popup-default-width, 
-    $popup-default-padding, 
-    $popup-default-background-color, 
-    $popup-default-border-width, 
-    $popup-default-border-color, 
-    $popup-default-border-radius,
-    $popup-default-arrow-size,
-    $popup-default-arrow-offset
+    $popup-menu-width, 
+    $popup-menu-padding, 
+    $popup-menu-background-color, 
+    $popup-menu-border-width, 
+    $popup-menu-border-color, 
+    $popup-menu-border-radius,
+    $popup-menu-arrow-size,
+    $popup-menu-arrow-offset
   );
+
+  .nav-list {
+    & > li {
+      & > a {
+        color: $gray7;
+        text-align: center;
+        border-bottom: 1px solid $gray9;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &:last-of-type {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
 
 $popup-tooltip-width: 220px;
@@ -58,4 +78,10 @@ $popup-tooltip-arrow-offset: 10px;
     $popup-tooltip-arrow-size,
     $popup-tooltip-arrow-offset
   );
+
+  font-size: 12px;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }

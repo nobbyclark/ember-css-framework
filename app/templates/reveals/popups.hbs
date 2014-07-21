@@ -18,15 +18,15 @@
         <h3 class="h4">Popups</h3>
 
           <div class="sandbox">
-            {{#view App.PopupView id="example-1" class="settings" popupStyle="popup-default" popupAlign="right" arrowAlign="top" toggleClasses="glyphicon-settings btn-glyphicon glyphicon-sml" style="top:50px;left:50px;"}}
+            {{#view App.PopupView id="example-1" popupStyle="popup-menu" popupAlign="right" arrowAlign="top" toggleClasses="glyphicon-settings btn-glyphicon glyphicon-sml" style="top:50px;left:50px;"}}
               <ul class="nav-list">
                 <li><a href="#">Edit</a></li>
                 <li><a href="#">Archive</a></li>
               </ul>
             {{/view}}
 
-            {{#view App.PopupView id="example-2" class="settings" popupStyle="popup-tooltip" popupAlign="right" arrowAlign="top" toggleClasses="glyphicon-info btn-glyphicon glyphicon-sml" style="top:50px;left:200px;"}}
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur adipisci quibusdam reiciendis facilis tempore qui nobis saepe, vero, repellendus repellat quam nam distinctio? Tempore, repudiandae a fugiat. Odio, incidunt, debitis.</p>
+            {{#view App.PopupView id="example-2" popupStyle="popup-tooltip" popupAlign="right" arrowAlign="top" toggleClasses="glyphicon-info btn-glyphicon glyphicon-sml" style="top:50px;left:200px;"}}
+              <p>This is a <strong>tooltip</strong>. Tooltips provide extra information about something.</p>
             {{/view}}
           </div>
 
