@@ -2,6 +2,7 @@
 .reveal-dropdown {
   position: relative;
 
+  // toggle
   & > .toggle {
     @extend .btn;
     @extend .btn-icon;
@@ -10,16 +11,11 @@
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
+
     & > .icon {
       -webkit-transition: -webkit-transform 300ms;
       transition: transform 300ms;
     }
-  }
-
-  & > .content {
-    height: 0;
-    overflow: hidden;
-    transition: height 300ms;
   }
 
   &.open {
@@ -29,6 +25,13 @@
         transform: rotate(180deg);
       }
     }
+  }
+
+  // content
+  & > .content {
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms;
   }
 }
 
@@ -68,6 +71,7 @@
 
 .reveal-dropdown {
 
+  // toggle
   & > .toggle {
     @extend .btn-primary;
     display: block;
@@ -75,18 +79,19 @@
     transition: 300ms border-radius;
   }
 
-  & > .content {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    z-index: 999;
-  }
-
   &.open {
     & > .toggle {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+  }
+
+  // content
+  & > .content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 999;
   }
 
   // Don't let content exceed the size of the button/toggle
@@ -109,10 +114,18 @@ $reveal-popup--content--border-width:     1px;
 .reveal-popup {
   position: absolute;
 
+  // toggle
   & > .toggle {
     display: block;
   }
+
+  &.open {
+    & > .toggle.btn-glyphicon {
+      color: $gray9;
+    }
+  }
   
+  // content
   & > .content {
     position: absolute;
     height: auto;
@@ -134,10 +147,4 @@ $reveal-popup--content--border-width:     1px;
   // $width, $padding, $background-color, $border-width, $border-color, $border-radius, $arrow-size, $arrow-offset)
   &.default-menu { @include popup(160px, 0px, $reveal-popup--content--background-color, $reveal-popup--content--border-width, $reveal-popup--content--background-color, 5px, 10px, 10px); }
   &.bordered { @include popup(200px, 10px, #ffffff, $reveal-popup--content--border-width, $gray6, 10px, 12px, 12px); }
-
-  &.open {
-    & > .toggle.btn-glyphicon {
-      color: $gray9;
-    }
-  }
 }

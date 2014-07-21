@@ -16,16 +16,21 @@
     <div class="example-section">
       <div class="example-description">
         <h3 class="h4">Popups</h3>
-        
-          <div id="popup-example">
 
-            {{#view App.PopupView class="default-menu settings" popupAlign="right" arrowAlign="top" text="" offset=4 toggleClasses="glyphicon-settings btn-glyphicon glyphicon-sml"}}
+          <div class="sandbox">
+            {{#view App.PopupView id="example-1" class="default-menu settings" popupAlign="right" arrowAlign="top" text="" offset=4 toggleClasses="glyphicon-settings btn-glyphicon glyphicon-sml" style="top:50px;left:50px;"}}
               <ul class="nav-list">
                 <li><a href="#">Edit</a></li>
                 <li><a href="#">Archive</a></li>
               </ul>
             {{/view}}
 
+            {{#view App.PopupView id="example-2" class="default-menu settings" popupAlign="right" arrowAlign="top" text="" offset=4 toggleClasses="glyphicon-info btn-glyphicon glyphicon-sml" style="top:50px;left:200px;"}}
+              <ul class="nav-list">
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Archive</a></li>
+              </ul>
+            {{/view}}
           </div>
 
         </div>
