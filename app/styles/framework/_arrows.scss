@@ -14,7 +14,7 @@
 @mixin arrow-up($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: 0 $arrow-width $arrow-width $arrow-width;
-  border-bottom-color: $arrow-border-color;
+  border-bottom-color: darken($arrow-border-color, 15%);
 
   &:before {
     @extend %arrow;
@@ -28,7 +28,7 @@
 @mixin arrow-right($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width 0 $arrow-width $arrow-width;
-  border-left-color: $arrow-border-color;
+  border-left-color: darken($arrow-border-color, 15%);
 
   &:before {
     @extend %arrow;
@@ -42,7 +42,7 @@
 @mixin arrow-down($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width $arrow-width 0 $arrow-width;
-  border-top-color: $arrow-border-color;
+  border-top-color: darken($arrow-border-color, 15%);
 
   &:before {
     @extend %arrow;
@@ -56,7 +56,7 @@
 @mixin arrow-left($arrow-width, $arrow-bg-color, $arrow-border-width, $arrow-border-color) {
   @extend %arrow;
   border-width: $arrow-width $arrow-width $arrow-width 0;
-  border-right-color: $arrow-border-color;
+  border-right-color: darken($arrow-border-color, 15%);
 
   &:before {
     @extend %arrow;
