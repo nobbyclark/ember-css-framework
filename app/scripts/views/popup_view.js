@@ -4,7 +4,7 @@ App.PopupView = App.RevealView.extend({
 
   arrowClass: 'arrow',
 
-  offset: 10,
+  offset: 6,
   popupAlign: 'top',
   arrowAlign: 'center',
 

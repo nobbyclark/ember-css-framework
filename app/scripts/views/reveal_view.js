@@ -37,7 +37,10 @@ App.RevealView = Ember.View.extend(App.RevealMixin, {
   layoutName: 'layouts/reveal_layout',
   classNameBindings: ['isOpen:open'],
   attributeBindings: ['style'],
+
   isOpen: false,
+
+  popupStyle: 'popup-default',
 
   contentClass: 'content',
   contentWrapClass: 'wrap',

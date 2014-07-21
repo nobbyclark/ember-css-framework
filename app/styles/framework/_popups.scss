@@ -1,0 +1,61 @@
+// Popup Styles
+// --------------------------
+
+/*
+
+  @include popup(
+    $width, 
+    $padding, 
+    $background-color, 
+    $border-width, 
+    $border-color, 
+    $border-radius, 
+    $arrow-size, 
+    $arrow-offset
+  );
+
+*/
+
+$popup-default-width: 160px;
+$popup-default-padding: 0px;
+$popup-default-background-color: $gray10;
+$popup-default-border-width: 1px;
+$popup-default-border-color: $gray10;
+$popup-default-border-radius: 5px;
+$popup-default-arrow-size: 10px;
+$popup-default-arrow-offset: 10px;
+
+.popup-default { 
+  @include popup(
+    $popup-default-width, 
+    $popup-default-padding, 
+    $popup-default-background-color, 
+    $popup-default-border-width, 
+    $popup-default-border-color, 
+    $popup-default-border-radius,
+    $popup-default-arrow-size,
+    $popup-default-arrow-offset
+  );
+}
+
+$popup-tooltip-width: 220px;
+$popup-tooltip-padding: 10px;
+$popup-tooltip-background-color: #fff;
+$popup-tooltip-border-width: 1px;
+$popup-tooltip-border-color: $gray6;
+$popup-tooltip-border-radius: 5px;
+$popup-tooltip-arrow-size: 10px;
+$popup-tooltip-arrow-offset: 10px;
+
+.popup-tooltip { 
+  @include popup(
+    $popup-tooltip-width,
+    $popup-tooltip-padding,
+    $popup-tooltip-background-color,
+    $popup-tooltip-border-width,
+    $popup-tooltip-border-color,
+    $popup-tooltip-border-radius,
+    $popup-tooltip-arrow-size,
+    $popup-tooltip-arrow-offset
+  );
+}
