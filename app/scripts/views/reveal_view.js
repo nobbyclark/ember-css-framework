@@ -36,6 +36,7 @@ App.RevealMixin = Ember.Mixin.create({
 App.RevealView = Ember.View.extend(App.RevealMixin, {
   layoutName: 'layouts/reveal_layout',
   classNameBindings: ['isOpen:open'],
+  attributeBindings: ['style'],
   isOpen: false,
 
   contentClass: 'content',
@@ -44,6 +45,7 @@ App.RevealView = Ember.View.extend(App.RevealMixin, {
   toggleClasses: '',
 
   text: 'Toggle',
+  style: '',
 
   actions: {
     toggleReveal: function() {
