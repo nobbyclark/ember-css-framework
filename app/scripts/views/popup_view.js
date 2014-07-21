@@ -3,6 +3,7 @@ App.PopupView = App.RevealView.extend({
   classNames: ['reveal-popup'],
 
   arrowClass: 'arrow',
+  popupStyle: 'popup-default',
 
   offset: 6,
   popupAlign: 'top',
