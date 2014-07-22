@@ -40,12 +40,11 @@ App.RevealView = Ember.View.extend(App.RevealMixin, {
 
   isOpen: false,
 
-  popupStyle: 'popup-default',
-
   contentClass: 'content',
   contentWrapClass: 'wrap',
   toggleClass: 'toggle',
   toggleClasses: '',
+  iconClasses: '',
 
   text: 'Toggle',
   style: '',

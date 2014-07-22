@@ -9,6 +9,8 @@ App.PopupView = App.RevealView.extend({
   popupAlign: 'top',
   arrowAlign: 'center',
 
+  text: '',
+
   didInsertElement: function() {
 
     var toggle = this.$('.' + this.toggleClass),

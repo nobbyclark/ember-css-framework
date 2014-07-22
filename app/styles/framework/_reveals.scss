@@ -4,9 +4,6 @@
 
   // toggle
   & > .toggle {
-    @extend .btn;
-    @extend .btn-icon;
-
     /* fixes flicker in Safari */
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-perspective: 1000;
@@ -43,8 +40,6 @@
   border-bottom: 2px solid $gray4;
 
   & > .toggle {
-    @extend .btn-default;
-    @extend .btn-block;
     padding-left: 0;
     padding-right: 0;
     color: $gray6;
@@ -73,7 +68,6 @@
 
   // toggle
   & > .toggle {
-    @extend .btn-primary;
     display: block;
     width: 100%;
     transition: 300ms border-radius;
